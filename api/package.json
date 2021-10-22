@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
+    "mqtt": "^4.2.8",
     "serialport": "^9.2.4",
     "ws": "^8.2.3"
   }
