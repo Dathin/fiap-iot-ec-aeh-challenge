@@ -37,5 +37,5 @@ void loop() {
 
 double measureMockedAnalog(int pin) {
   // Calculate to mock the ratio to aprox. 0.01V to 1 (eg. 1V = 100)
-  return analogRead(pin) / 2.05;
+  return analogRead(pin) / 2.046;
 }
