@@ -19,5 +19,11 @@ mqttClient.on('connect', () => console.log('Connected'));
 
 parser.on('data', data => {
   console.log(data);
-  mqttClient.publish('vital_signs', data);
+  const parsedData = JSON.parse(data)
+  if(parsedData.emergency){
+    mqttClient.publish('emergency', data);
+  } else {
+    mqttClient.publish('vital_signs', data);
+  }
+  
 });
